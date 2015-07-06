@@ -76,7 +76,10 @@
     <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function () {
-      
+     
+      $('.subnav-trigger').on('click', function () {
+        $('.sub-nav', this).slideToggle()
+      })
 
     });
     </script>
