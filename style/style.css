@@ -159,7 +159,10 @@ a {
   width: 25%;
   /*padding-right: 2rem;*/
 }
-.nav { padding: 1rem 0;}
+.nav { 
+  padding: 1rem 0;
+}
+.nav.flex { flex-flow: column nowrap;}
 .nav > li {
   padding: .5rem 0;
 }
@@ -187,14 +190,11 @@ a {
   }
   .menu { 
     width: 100%;
-
-    display: table;
-    table-layout: fixed;
+  }
+  .nav.flex {
+    flex-flow: row nowrap; 
   }
   .nav > li { 
-    width: auto;
-    display: table-cell;
-
     padding: 0 .5rem 0 .5rem;
     text-align: center;
   }
