@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html lang="en-US" dir="ltr"> 
+<head>
+  <title>Dean Monogensis</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link href="/assets/style/style.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="container">
+      <!-- header -->
+      {{= it.include("header") }}
+
+      <div id="content">
+        {{= it.document }}
+      </div>
+
+        {{= it.include("footer") }}
+  </div>
+
+
+  <script type="text/javascript" src="/assets/library/lib.min.js"></script>
+  <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+
+</body>
+</html>
