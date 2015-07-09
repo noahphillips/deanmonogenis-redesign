@@ -1,0 +1,16 @@
+.icon {
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block;
+// this is how we set the height
+	padding-bottom: 100%;
+}
+
+// svg's width
+@each $i in (8 14 16 22 24 27 28 32 34 38 48 60 72 90 155 360) {
+	.icon-#{$i} {
+		width: #{$i}px; 
+		height: auto;
+	}
+}

@@ -1,0 +1,85 @@
+/**
+  @name Button
+  @description a simple button
+
+  @state .button-alt      - modifier added to change base appearence
+  @state .button-50     - a half width button
+
+  @markup
+    <a href="#/" class="button">Login</a>
+
+**/
+
+.button {
+	display: block; 
+
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+
+	border-radius: $border-radius;
+
+	padding: 12px;
+	
+	
+	font-size: $baseline-rem;
+	line-height: $baseline-lineheight; 
+
+	text-decoration: none;
+	text-align: center;
+	
+	cursor: pointer;
+
+	background-color: $site-highlight;
+	color: $site-color;
+
+	border: none;
+	
+	&:hover { 
+		background-color: $site-hover; 
+		color: $site-color; 
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	@for $i from 1 through 100 {
+		&.button-#{$i} {
+			width: $i * 1%;
+		}
+	}
+
+	&.button-cta {
+		width:120px;
+
+		@include tablet(){
+			display: none;
+		}
+	}
+
+}
+
+// button transparent
+.button-alt {
+	@extend .button;
+	background-color: rgba(255, 255, 255, 0.29);
+	border: 2px solid $site-color;
+	color: $site-color;
+
+	&:hover {
+		background-color: $site-hover;
+		color: $site-color;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+//button wrapper
+@for $i from 1 through 300 {
+	.button-wrapper-#{$i} {
+		width: $i + px;
+	}
+}
+

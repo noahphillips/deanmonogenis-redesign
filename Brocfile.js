@@ -15,7 +15,14 @@ var assets = 'assets/',
   app = 'app',
   img = 'img',
   svg = 'svg';
+  fonts = 'fonts';
 
+/**************************************************
+ * FONTS
+ **************************************************/
+var fontsTree = funnel(assets+'/'+fonts, {
+  destDir: 'assets/fonts'
+});
 
 /**************************************************
  * SASS
@@ -91,7 +98,7 @@ var uglifyJS = uglifyJS(concatAppJS, {
 
 
 // Final JS
-var fullJS = mergeTrees([uglifyLibJS,]);
+var fullJS = mergeTrees([uglifyLibJS, uglifyJS]);
 
 
 /**************************************************
@@ -117,8 +124,6 @@ var destHtml5 = funnel(htmls, {
 
 var fullHTML = mergeTrees([destHtml5]);
 
-
-
 /**************************************************
  * PNG / JPG / SVG
  **************************************************/
@@ -135,4 +140,4 @@ var appImgs = mergeTrees([images, svgs/*svgsTree, imgsTree*/], {overwrite: true}
 /**************************************************
  * EXPORTS
  **************************************************/
-module.exports = mergeTrees([fullCSS, fullJS, fullHTML, appImgs]);
+module.exports = mergeTrees([fullCSS, fullJS, fullHTML, appImgs, fontsTree]);

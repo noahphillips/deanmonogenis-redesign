@@ -1,0 +1,192 @@
+/**
+  @name Input
+  @description Defines the base for other input modules, should not be used alone in this case.
+
+  @state .is-invalid
+  @state .is-valid
+
+  @markup
+	<input class="input" />
+**/
+
+.input {
+	transition-property: all;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+	border-radius: 6px;
+	
+	border: 2px solid $site-stroke;
+	padding: 10px 17px;
+
+	color: $site-light;
+
+	@include type-size(1.7);
+
+	width: 100%;
+
+	&:focus {
+		outline: none;
+		border: 2px solid $site-strong;
+		color: $site-medium;
+	}
+
+	&.is-invalid {
+		border: 2px solid $site-error;
+	}
+
+	&.is-valid {
+		border: 2px solid $site-highlight;
+		color: $site-medium;
+	}
+	&.error {
+		border: 2px solid $site-error;
+	}
+}
+
+//hides X button in submit forms
+::-ms-clear { 
+    width : 0; 
+    height: 0; 
+} 
+::-ms-reveal {
+    width : 0;
+    height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="submit"] {
+	width: 150px;
+	height:50px;
+	padding: 0;
+
+	position: absolute;
+	right: 10px;
+
+	@include tablet(){
+		right:0;
+	}
+
+	background-color:$site-highlight;
+	border:none;
+	border-radius: $border-radius;
+	
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+
+	
+	font-size: $baseline-rem;
+	line-height: $baseline-lineheight; 
+	text-transform:lowercase;
+	color:white;
+
+	text-decoration: none;
+	text-align: center;
+	
+	cursor: pointer;
+	-webkit-appearance: none;
+
+	&:hover { 
+		background-color: $site-hover; 
+		color: $site-color; 
+	}
+}
+
+/**
+  @name Text/Password Input
+
+  @markup
+	<input class="input input-text" type="text" placeholder="this is placeholder text" />
+	<input class="input input-password" type="text" />
+**/
+
+.input-text,
+.input-password {
+	padding: $spacing-half $spacing-double;
+}
+
+/**
+  @name Text/Password Input-Alt
+
+  @markup
+	<input class="input input-text-alt" type="text" placeholder="User ID" />
+	<input class="input input-password-alt" type="text" placeholder="Password" />
+**/
+
+.input-text-alt,
+.input-password-alt {
+	background-color: $site-background-alt;
+	border: 2px solid transparent;
+	display: block;
+	margin: $spacing-half 0;
+	color: white;
+
+	&:focus {
+		// @include experimental(outline, none);
+		border: 2px solid white;
+		color: white;
+	}
+}
+
+
+/**
+  @name Textarea Input
+
+  @markup
+	<textarea class="input input-textarea"></textarea>
+**/
+
+.input-textarea {
+	@include type-size(1.7);
+  transition-property: opacity, border;
+	padding: 8px 17px 8px 17px;
+  overflow: auto !important;
+  word-wrap:break-word;
+  resize: none;
+}
+
+
+/**
+  @name File Input
+
+  @markup
+	<input class="input input-file" type="file" />
+
+**/
+
+.input-file {
+	@include type-size(1.6);
+	line-height: 0px !important;
+}
+
+ 
+
+
+// Placeholder animation stuff (for all inputs)
+
+@mixin placeholder-animation {
+	transition-property: all;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+  
+	opacity: 0;
+    	
+  text-indent: -100%;
+}
+
+*:focus::-webkit-input-placeholder { /* WebKit browsers */
+	@include placeholder-animation;
+}
+*:focus::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    @include placeholder-animation;
+}
+*:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+    @include placeholder-animation;
+}
+*:focus::-ms-input-placeholder { /* Internet Explorer 10+ */
+    @include placeholder-animation;
+}

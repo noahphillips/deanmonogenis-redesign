@@ -1,0 +1,40 @@
+/**
+@name List
+@description defined the base module for lists
+
+@state .list-inline - an inline list with floated list items
+@state .list-bordered - a list with borders on all the tops
+@state .list-tight - a list with tighter margins
+@state .list-tight-bordered - a list with tighter margins with borders
+
+@markup
+  <ul class="list">
+    <li class="list-item">Buzz</li>
+    <li class="list-item">Woody</li>
+    <li class="list-item">Rex</li>
+  </ul>
+**/
+
+.list {
+  list-style: none;
+  li {
+    display: inline;
+    margin: 0 10px;
+  }
+}
+
+.list-item {
+	@include type-size(1.5);
+	margin-bottom: $spacing-double;	
+}
+
+.list-inline {
+	@extend .list;
+	.list-item, li {
+		float: left;
+		padding: 0 $spacing 0 0;
+		margin-bottom: 0;
+	}
+}
+
+ 

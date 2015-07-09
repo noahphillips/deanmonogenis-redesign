@@ -1,0 +1,81 @@
+// MAIN NAV
+.nav { 
+  padding: 1rem 0;
+  text-align: left;
+
+  position: relative;
+}
+.nav.flex { flex-flow: row wrap;}
+.nav > li {
+  padding: .5rem  1.5rem;
+
+}
+.nav > li:first-child {
+  padding-left: 0;
+}
+
+.subnav-trigger { cursor: pointer}
+.sub-nav {
+  max-height: 0;
+  /*height: 100%; */
+  opacity: 0;
+  width: 100%;
+  padding: 1rem .5rem;
+  
+  background-color: #E5ECE9;
+  border-radius: 2px;
+  
+  display: flex;
+  flex-flow: row wrap;
+
+  position: absolute;
+  top: 55px;
+  left: 0;
+  transition: max-height .3s, opacity .5s;
+}
+.sub-nav.is-active {
+  max-height: 100%;
+  opacity: 1;
+}
+.sub-nav:after {
+  content: " ";
+  display: block;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid  #E5ECE9;
+}
+.sub-nav.one:after {
+  top: -15px;
+  left: 12px;
+}
+.sub-nav.two:after {
+  top: -15px;
+  left: 350px;
+}
+.sub-nav.three:after {
+  top: -15px;
+  left: 582px;
+}
+.sub-nav > li {
+  padding: 0 1rem 0 0;
+}
+.sub-nav > li:first-child {
+  padding-left: 0;
+}
+
+/* HERO */
+.hero.main {
+  /*background-color: #41463D;*/
+  color: black;
+  padding: 3rem 0;
+  border-radius: 2px
+}
+
+.hero.main .heading {
+  font-size: 5rem;
+}

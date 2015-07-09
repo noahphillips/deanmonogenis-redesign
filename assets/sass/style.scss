@@ -1,1 +1,32 @@
+@import "includes/reset";
+
+// includes (variables and macros) 
+@import "includes/variables";
+@import "includes/mixins";
+@import "includes/utilities";
+@import "includes/font";
+
+// base styles
+@import "base/base";
+// ** typography **
+@import "base/headers";
+@import "base/list";
+@import "base/paragraph";
+@import "base/link";
+@import "base/colors";
+// ** ui **
+@import "base/button";
+@import "base/input";
+@import "base/icon";
+@import "base/select";
+// ** layout **
+@import "base/hr";
+// ** base grid **
+@import "base/wrapper";
+@import "base/slice";
+@import "base/flex";
+
+
+// modules
 @import "modules/menu-toggle";
+@import "modules/header";

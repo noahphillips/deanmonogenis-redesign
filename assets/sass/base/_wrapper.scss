@@ -1,0 +1,27 @@
+.wrapper-small {
+	max-width: $phone-l+ px;
+	margin-right: auto;
+	margin-left: auto; 
+	padding: $spacing-double;
+}
+.wrapper {
+	max-width: $full-l+ px;
+	margin-right: auto;
+	margin-left: auto; 
+	padding:0 20px;
+	@include phone-l{
+		max-width: 100%;
+		width: 100%;
+	}
+}
+.wrapper-md{
+	max-width: $tablet + px;
+}
+.wrapper-lrg {
+	max-width: $full-l + px;
+	@include phone-l{
+		max-width: 100%;
+		width: 100%;
+	}
+}
+

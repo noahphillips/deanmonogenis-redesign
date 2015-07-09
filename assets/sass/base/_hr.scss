@@ -1,0 +1,15 @@
+.hr-wrapper {
+	padding: 1px 0;
+	width: 100%;
+
+  &-white { background-color: white;}
+}
+.clean-hr {
+  border: none;
+  width: 100%;
+  border-top: 1px solid $site-stroke; 
+
+  &.hr-50 { width: 50%;}
+}
+
+ 

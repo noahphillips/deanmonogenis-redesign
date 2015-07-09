@@ -1,0 +1,47 @@
+.headers {
+  margin-bottom: 40px;
+  color:$site-strong;
+
+  &.reset-vertical {
+    margin-bottom: 0;
+  }
+}
+
+.header-lrg {
+  font-size: 8rem;
+  line-height: 5.5rem;   
+}
+
+.header-md {
+  
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+}
+
+.header-sml {
+  
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.header-xsml, h2 {
+  // font-family: $allerbold;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.subhead-lrg {
+  
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+}
+
+.subhead-xsml {
+  
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+}
+ 

@@ -1,0 +1,38 @@
+/**
+  @name Paragraph
+  @description Style for the paragraph class
+
+  @state .paragraph-medium
+  @state .paragraph-small
+  @state .paragraph-sub
+  @state .paragraph-header
+  
+  @markup
+    <div class="paragraph">Aliquam ac ornare lectus. Sed euismod odio eu est ullamcorper, scelerisque molestie tellus tincidunt. Mauris ac tellus ac lorem mollis tincidunt. Nam vulputate enim non velit hendrerit, quis posuere risus laoreet. Nullam vitae odio nibh. Etiam vel scelerisque ligula. Sed ac velit quis elit scelerisque convallis. Mauris vitae lectus eu arcu posuere volutpat. Mauris non velit vehicula, posuere metus et, venenatis ante. Phasellus sit amet dui felis. Duis posuere leo justo, at varius justo pellentesque sed.</div>
+*/
+
+.paragraph {
+    margin-bottom: $spacing-double;
+
+    &.reset-vertical {
+      margin-bottom: 0;
+    }
+}
+
+.paragraph-lrg {
+  @include type-size(2.2);
+}
+
+.paragraph-md {
+  @include type-size(2.0);
+}
+
+.paragraph-sml, p {
+  @include type-size(1.8);
+  margin:5px auto 10px;
+}
+
+.paragraph-xsml {
+  @include type-size(1.6);
+}
+

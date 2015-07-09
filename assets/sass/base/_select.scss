@@ -1,0 +1,11 @@
+select, option {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+select {
+	background:url(../source/images/double-arrows.png) center right no-repeat;
+	background-color:white;
+}
+select::-ms-expand {
+    display: none;
+}

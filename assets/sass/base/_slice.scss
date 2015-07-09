@@ -1,0 +1,53 @@
+.slice {
+	width: 100%;
+
+	@for $i from 1 through 100 {
+		.slice-#{$i} {
+			width: $i * 1%;
+		}
+	}
+}
+
+// display table
+.slice-table {
+	display: table;
+
+	&.slice-fixed {
+		table-layout: fixed;
+	}
+
+	.slice-table-row {
+		display: table-row;
+	}
+
+	.slice-item {
+		display: table-cell;
+	}
+}
+
+// display table alignment
+.slice-align-top {
+    vertical-align: top;
+}
+.slice-align-middle {
+    vertical-align: middle;
+}
+.slice-align-bottom {
+    vertical-align: bottom;
+}
+
+@include tablet() {
+	.slice {
+		.slice-item {
+			width: 100%;
+		}
+	}
+	.slice-table {  
+		> .slice-item {
+			display: block;
+		}
+	}
+	.header .slice .slice-item.slice-17 {
+		width:17%;
+	}
+}
