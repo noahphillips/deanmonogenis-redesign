@@ -2,10 +2,13 @@
   width: 100%;
   background-color: $nav-color;
 }
+.nav-list {
+}
 .nav-item {
   padding-left: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  
   border-bottom: 1px solid rgba(#000, .2);
   @include type-size (2);
 
