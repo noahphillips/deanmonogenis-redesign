@@ -14,9 +14,8 @@ $site-background: #ffffff;
 $site-background-alt: #f9f9f9;
 
 // sidebar
-// $sidebar-color: lighten(#878787, 20%);
-$sidebar-color: #878787;
-$nav-color: #C8C8C8;
+$sidebar-color: darken(#cfcfc7, 20%);
+$nav-color: lighten($sidebar-color, 10%);
 
 //font families
 $base-font: 'latoregular';
@@ -57,7 +56,8 @@ $spacing-fourth: $spacing / 4;
 // responsive
 	// global breaks
 	$tiny: 320;
-	$small: 480;
+  $small: 480;
+	$phone-s: 360;
 	$phone: 640;
 	$phone-l: 768;
 	$tablet: 960;
@@ -77,6 +77,9 @@ $spacing-fourth: $spacing / 4;
 }
 @mixin small() {
   @include respond-to($small) { @content; }
+}
+@mixin phone-s() {
+  @include respond-to($phone-s) { @content; }
 }
 @mixin phone() {
   @include respond-to($phone) { @content; }

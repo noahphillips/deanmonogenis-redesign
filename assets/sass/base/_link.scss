@@ -1,15 +1,3 @@
-/**
-  @name Link
-  @description Link module
-
-  @state .link-alt - a link with the default site color
-  @state .link-arrow - a link that has a right arrow
-  @state .link-arrow-down - a link that has a download arrow
-
-  @markup
-    <a  href="http://en.wikipedia.org/wiki/Special:Random">Wikipedia</a>
-**/
-
 a {
   transition-property: color;
   transition-duration: 0.3s;
@@ -18,32 +6,32 @@ a {
   text-decoration: none;
   cursor: pointer;
 
-  &:hover { color: $site-medium; }
+  // &:hover { color: $site-medium; }
 
-  &.red {
-    color: $site-highlight;
-  }
+  // &.red {
+  //   color: $site-highlight;
+  // }
 }
 
 
-.link-more {
+// .link-more {
   
-  font-size: 1.8rem;
-  line-height: 2rem;
-  color: $site-highlight;
-}
+//   font-size: 1.8rem;
+//   line-height: 2rem;
+//   color: $site-highlight;
+// }
  
-.post-link {
-  float:right;
-  color:$site-highlight;
-  font-size:2.4rem;
-  font-weight: 700;
+// .post-link {
+//   float:right;
+//   color:$site-highlight;
+//   font-size:2.4rem;
+//   font-weight: 700;
   
-  a {
-    color:$site-highlight;
-    transition: opacity 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
+//   a {
+//     color:$site-highlight;
+//     transition: opacity 0.3s;
+//     // &:hover {
+//     //   opacity: 0.7;
+//     // }
+//   }
+// }

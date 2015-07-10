@@ -5,12 +5,12 @@
   
   flex-flow: row nowrap; 
 
-    @for $i from 1 through 100 {
-        .flex-item-#{$i} {
-            width: $i * 1%;
-            margin:0 auto;
-        }
+  @for $i from 1 through 100 {
+    .flex-item-#{$i} {
+      width: $i * 1%;
+      margin:0 auto;
     }
+  }
 }
 
 // one column stack
@@ -57,7 +57,7 @@
   .flex {
     flex-flow: column nowrap; 
 
-      .flex-item {  width: 100%;}
+    .flex-item { width: 100%;}
   }
   .flex-gutter {
     margin: 0.5rem 0 0.5rem 0;

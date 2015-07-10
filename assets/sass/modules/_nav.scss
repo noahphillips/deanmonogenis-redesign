@@ -1,19 +1,29 @@
 .nav {
   width: 100%;
+  height: 100%;
   background-color: $nav-color;
 }
-.nav-list {
-}
 .nav-item {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  
   border-bottom: 1px solid rgba(#000, .2);
-  @include type-size (2);
-
+  
   &:last-child { border-bottom: 0;}
-}
-.nav-head {
-  min-height: 250px;
+  
+  a {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    
+    width: 100%;
+    display: block;
+
+    @include type-size (2);
+
+    background-color: $nav-color;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      color: darken(#eee9dd, 66%);
+      background-color: darken($sidebar-color, 10%);
+    }
+  }
 }
